@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var DB = require('../../config/connection');
-var User = DB.models.User;
 var Question = DB.models.Question;
 
 

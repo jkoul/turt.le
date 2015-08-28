@@ -9,10 +9,11 @@ if (process.env.DATABASE_URL){
   });
 } else {
   sequelize = new Sequelize("postgres:///turtle_db");
+}
 
 // var User = sequelize.import("../app/models/user");
-var Question = sequelize.import("../app/models/question");
-var Answer = sequelize.import("../app/models/answer");
+var Question = sequelize.import("../models/question");
+var Answer = sequelize.import("../models/answer");
 
 // User.hasMany(Question);
 // User.hasMany(Answer);

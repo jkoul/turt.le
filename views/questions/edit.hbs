@@ -1,0 +1,12 @@
+<h2>Edit Question</h2>
+<form action="/questions/{{question.id}}?_method=PUT" method="post">
+  <label for="title">Title:</label>
+  <input name="title" value="{{question.title}}">
+<!-- does the textbox here apply? -->
+  <label for="content">Content:</label>
+  <input name="content" value="{{question.content}}">
+  <input type="submit" value="Edit">
+</form>
+<form action="/question/{{question.id}}?_method=DELETE" method="post">
+  <input class="button-delete" type="submit" value="Delete!">
+</form>
