@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Turt.le</title>
+    <link rel="stylesheet" href="/stylesheets/application.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+    <script src="/javascripts/models/user.js"></script>
+    <script src="/javascripts/models/question.js"></script>
+    <script src="/javascripts/models/answer.js"></script>
+    <script src="/javascripts/views/userView.js"></script>
+    <script src="/javascripts/views/questionView.js"></script>
+    <script src="/javascripts/views/answerView.js"></script>
+    <script src="/javascripts/application.js"></script>
+  </head>
+
+  <body>
+
+    <div class="banner">
+      <img class="header" src="images/header.png"/>
+      <h1 class="title">turt.le</h1>
+      <img class="logo" src="images/logo.png"/>
+      <p class="welcome">
+        <span style="font-size:32px">For when you get stuck on your back.</span> <br>
+        Ask a code-related question, get help from instructors, students, or TA's.<br>
+        Free until the heat death of the universe.
+      </p>
+    </div>
+
+    <nav>
+      <button type="button" class="ask-button" name="ask">Ask a Question</button>
+      <button type="button" class="categories-button" name="Categories">Categories</button>
+
+      <form class="search">
+        <input type="search" placeholder="Search..." name="search">
+        <input type="submit" style="visibility: hidden;" value="Submit">
+      </form>
+
+    </nav>
+
+
+    {{{body}}}
+  </body>
+</html>
