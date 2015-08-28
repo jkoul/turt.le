@@ -4,12 +4,12 @@ var path = require("path");
 var bodyParser = require("body-parser");
 
 // var usersController = require("./app/controllers/users");
-var questionsController = require("./app/controllers/questions");
-var answersController = require("./app/controllers/answers");
+var questionsController = require("./controllers/questions");
+var answersController = require("./controllers/answers");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use("/", express.static(path.join(__dirname + "/assets")));
 app.set("view engine", "hbs")
 
 // app.use("/", usersController);
@@ -17,7 +17,7 @@ app.use("/", questionsController);
 app.use("/", answersController);
 
 app.get("/", function(req, res){
-  res.render("index")
+  res.redirect("/questions")
 });
 
 
